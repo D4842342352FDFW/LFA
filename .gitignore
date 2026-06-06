@@ -1,0 +1,13 @@
+# Mediu virtual
+.venv/
+venv/
+env/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Fișiere sistem sau VS Code
+.vscode/
+.DS_Store
+Thumbs.db
