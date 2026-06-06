@@ -1,0 +1,65 @@
+[Sigma]
+N
+S
+E
+W
+P
+[Stop]
+
+[Gamma]
+X
+$
+[Stop]
+
+[States]
+init
+start
+hall
+lab
+kitchen
+library
+garden
+heaven
+hell
+[Stop]
+
+[Start]
+init
+[Stop]
+
+[Accept]
+heaven
+hell
+[Stop]
+
+[Transitions]
+init, epsilon, epsilon, start, $
+start, N, epsilon, start, epsilon
+start, S, epsilon, start, epsilon
+start, E, epsilon, start, epsilon
+start, W, epsilon, hall, epsilon
+hall, S, epsilon, hall, epsilon
+hall, E, epsilon, start, epsilon
+hall, W, epsilon, lab, epsilon
+lab, E, epsilon, hall, epsilon
+lab, S, epsilon, lab, epsilon
+lab, N, epsilon, lab, epsilon
+lab, P, epsilon, lab, X
+hall, N, epsilon, kitchen, epsilon
+kitchen, W, epsilon, library, epsilon
+kitchen, S, epsilon, hall, epsilon
+kitchen, E, epsilon, kitchen, epsilon
+kitchen, N, epsilon, kitchen, epsilon
+library, W, epsilon, garden, epsilon
+library, N, epsilon, library, epsilon
+library, E, epsilon, kitchen, epsilon
+library, S, epsilon, library, epsilon
+garden, S, X, heaven, epsilon
+garden, S, X, hell, epsilon
+garden, E, epsilon, library, epsilon
+garden, W, epsilon, garden, epsilon
+garden, N, epsilon, garden, epsilon
+heaven, S, epsilon, heaven, epsilon
+heaven, N, epsilon, garden, epsilon
+heaven, E, epsilon, heaven, epsilon
+[Stop]

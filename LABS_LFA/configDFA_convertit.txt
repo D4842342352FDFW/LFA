@@ -1,0 +1,98 @@
+[Sigma]
+N
+S
+E
+W
+P
+[Stop]
+
+[States]
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+q8
+q9
+q10
+q11
+q12
+q13
+q14
+q15
+[Stop]
+
+[Start]
+q0
+[Stop]
+
+[Accept]
+q14
+q15
+[Stop]
+
+[Transitions]
+q0, N, q0
+q0, S, q0
+q0, E, q0
+q0, W, q1
+q1, N, q2
+q1, S, q1
+q1, E, q0
+q1, W, q3
+q2, N, q2
+q2, S, q1
+q2, E, q2
+q2, W, q4
+q3, N, q3
+q3, S, q3
+q3, E, q1
+q3, P, q5
+q4, N, q4
+q4, S, q4
+q4, E, q2
+q4, W, q6
+q5, N, q5
+q5, S, q5
+q5, E, q7
+q5, P, q5
+q6, N, q6
+q6, S, q8
+q6, E, q4
+q6, W, q6
+q7, N, q9
+q7, S, q7
+q7, E, q10
+q7, W, q5
+q8, N, q6
+q8, S, q11
+q8, E, q11
+q9, N, q9
+q9, S, q7
+q9, E, q9
+q9, W, q12
+q10, N, q10
+q10, S, q10
+q10, E, q10
+q10, W, q7
+q11, N, q6
+q11, S, q11
+q11, E, q11
+q12, N, q12
+q12, S, q12
+q12, E, q9
+q12, W, q13
+q13, N, q13
+q13, S, q14
+q13, E, q12
+q13, W, q13
+q14, N, q13
+q14, S, q15
+q14, E, q15
+q15, N, q13
+q15, S, q15
+q15, E, q15
+[Stop]

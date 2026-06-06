@@ -1,0 +1,38 @@
+[Sigma]
+pstart
+pend
+proom1
+proom2
+proom3
+proom4
+[Stop]
+[States]
+start
+end
+room1
+room2
+room3
+room4
+[Stop]
+[Start]
+start
+[Stop]
+[Accept]
+end
+[Stop]
+[Transitions]
+room1, proom2, room2
+room2, pend, end
+start, proom1, room1
+[Stop]
+
+[AuditLog]
+1. line: start--end -> start--room1--end
+2. line: end--room1 -> end--room2--room1
+3. tri: start--room1 + start--room3 + room3--room1
+4. square: start-room1-room3 -> insert room4 on start-room3
+[Stop]
+[TraversalLog]
+start -> room1 -> room2 -> end
+Result: ACCEPTED (shortest path)
+[Stop]

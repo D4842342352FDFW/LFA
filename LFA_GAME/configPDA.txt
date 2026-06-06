@@ -1,0 +1,70 @@
+[Sigma]
+pstart
+pend
+proom1
+proom2
+proom3
+proom4
+proom5
+proom6
+proom7
+proom8
+proom9
+proom10
+proom11
+proom12
+pickup
+[Stop]
+[Gamma]
+X
+[Stop]
+[States]
+start
+end
+room1
+room2
+room3
+room4
+room5
+room6
+room7
+room8
+room9
+room10
+room11
+room12
+ACCEPT
+[Stop]
+[Start]
+start
+[Stop]
+[Accept]
+ACCEPT
+[Stop]
+[Transitions]
+end, epsilon, X, ACCEPT, epsilon
+room1, proom6, epsilon, room6, epsilon
+room2, proom1, epsilon, room1, epsilon
+room3, proom2, epsilon, room2, epsilon
+room6, pend, epsilon, end, epsilon
+room7, pickup, epsilon, room7, X
+room7, proom3, epsilon, room3, epsilon
+start, proom7, epsilon, room7, epsilon
+[Stop]
+
+# Potion room: room7
+
+[AuditLog]
+1. line: start--end -> start--room1--end
+2. line: start--room1 -> start--room2--room1
+3. tri: start--room2 + start--room3 + room3--room2
+4. square: start-room2-room3 -> insert room4 on start-room2
+5. line: room2--room4 -> room2--room5--room4
+6. line: end--room1 -> end--room6--room1
+7. line: start--room3 -> start--room7--room3
+8. line: room2--room5 -> room2--room8--room5
+9. tri: room8--room5 + room8--room9 + room9--room5
+10. tri: room1--room6 + room1--room10 + room10--room6
+11. tri: room1--room6 + room1--room11 + room11--room6
+12. square: room5-room8-room9 -> insert room12 on room8-room9
+[Stop]

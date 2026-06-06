@@ -1,0 +1,22 @@
+[Sigma]
+cat
+dog
+sleeps
+[Stop]
+
+[V]
+S
+N
+V
+[Stop]
+
+[S]
+S
+[Stop]
+
+[R]
+S -> N V
+N -> cat
+N -> dog
+V -> sleeps
+[Stop]

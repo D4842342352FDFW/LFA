@@ -1,0 +1,57 @@
+[Pattern]
+(aa)?ba
+[Stop]
+
+[Sigma]
+a
+b
+[Stop]
+
+[States]
+q0
+q0c0
+q0c1
+q0c2
+q0c3
+q0c4
+q1c0
+q1c1
+q1c2
+[Stop]
+
+[Start]
+q0
+[Stop]
+
+[Accept]
+q0c4
+q1c2
+[Stop]
+
+[Transitions]
+# state, symbol, next_state
+q0, epsilon, q0c0
+q0c0, a, q0c1
+q0c1, a, q0c2
+q0c2, b, q0c3
+q0c3, a, q0c4
+q0, epsilon, q1c0
+q1c0, b, q1c1
+q1c1, a, q1c2
+[Stop]
+
+[RoomSymbols]
+room1, a
+room2, b
+room3, a
+room4, b
+room5, a
+room6, b
+room7, b
+room8, a
+[Stop]
+
+[ValidSequences]
+aaba
+ba
+[Stop]
